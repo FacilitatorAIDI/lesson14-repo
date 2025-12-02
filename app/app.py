@@ -24,7 +24,7 @@ app = Flask(__name__)
 def home():
     return "Scikit-Learn Iris Model API is running."
 
-@app.route('/predict', methods=)
+@app.route('/predict', methods=['POST'])
 def predict():
     if model is None:
         return jsonify({'error': 'Model is not loaded.'}), 500
